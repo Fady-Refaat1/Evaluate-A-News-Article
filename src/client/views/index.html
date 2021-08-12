@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Evaluate News Article</title>
+    </head>
+
+    <body>
+
+        <header>
+            <h1> Sentient Analyzer</h1>
+        </header>
+
+        <main>
+            <section>
+                
+                <form class="" onsubmit="return Client.handleSubmit(event)">
+                    <input id="url" type="url"  value=""  placeholder="Enter URL">
+                    <input type="submit" name="" value="submit" onclick="return Client.handleSubmit(event)" onsubmit="return Client.handleSubmit(event)">
+                </form>
+            </section>
+
+            <section>
+                <strong>Form Results:</strong>
+                <div id='loading'></div>
+                <ul id='Results'></ul>
+            </section>
+        </main>
+
+        <footer>
+            <p>©fadyRefaat 2021</p>
+        </footer>
+    </body>
+    <script>
+            if ('serviceWorker' in navigator) {
+            // Use the window load event to keep the page load performant
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/service-worker.js');
+            });
+        }
+    </script>
+</html>
